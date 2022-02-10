@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="bg-white dark:bg-cyan-500 max-w-[400px] mx-auto">
+      <header class="flex justify-between items-center px-5 py-3">
+        <h1 class="text-cyan-500 dark:text-white select-none">Calculator</h1>
+        <article class="relative">
+          <input type="checkbox" id="dropdown" class="hidden" />
+          <label
+            for="dropdown"
+            class="cursor-pointer select-none bg-cyan-500 dark:bg-white rounded-full px-5 py-2 text-white dark:text-cyan-500"
+            >Theme</label
+          >
+          <div
+            class="h-0 overflow-hidden absolute top-[130%] w-full rounded-md cursor-pointer"
+          >
+            <ul>
+              <li
+                data-theme="light"
+                class="p-3 bg-cyan-500 text-white hover:bg-white hover:text-cyan-500 dark:bg-white dark:text-cyan-500 dark:hover:bg-cyan-500 dark:hover:text-white"
+              >
+                Light
+              </li>
+              <li
+                data-theme="dark"
+                class="p-3 bg-cyan-500 text-white hover:bg-white hover:text-cyan-500 dark:bg-white dark:text-cyan-500 dark:hover:bg-cyan-500 dark:hover:text-white"
+              >
+                Dark
+              </li>
+              <li
+                data-theme="device"
+                class="p-3 bg-cyan-500 text-white hover:bg-white hover:text-cyan-500 dark:bg-white dark:text-cyan-500 dark:hover:bg-cyan-500 dark:hover:text-white"
+              >
+                Device
+              </li>
+            </ul>
+          </div>
+        </article>
+      </header>
+      <section>
+        <article class="p-3 bg-cyan-200 dark:bg-cyan-700">
+          <h2
+            data-previous-operand
+            class="text-cyan-500 dark:text-white text-right min-h-[2rem]"
+          ></h2>
+          <h1
+            data-current-operand
+            class="text-cyan-500 dark:text-white text-right min-h-[2rem]"
+          ></h1>
+        </article>
+        <article
+          id="face"
+          class="grid grid-cols-4 gap-1 bg-cyan-200 dark:bg-cyan-700"
+        >
+          <button data-all-clear class="col-span-2">AC</button>
+          <button data-delete>Del</button>
+          <button data-operation>/</button>
+          <button data-number>7</button>
+          <button data-number>8</button>
+          <button data-number>9</button>
+          <button data-operation>*</button>
+          <button data-number>4</button>
+          <button data-number>5</button>
+          <button data-number>6</button>
+          <button data-operation>+</button>
+          <button data-number>1</button>
+          <button data-number>2</button>
+          <button data-number>3</button>
+          <button data-operation>-</button>
+          <button data-number>0</button>
+          <button data-number>.</button>
+          <button data-equals class="col-span-2">=</button>
+        </article>
+      </section>
+    </main>
+  </body>
+
+  <script src="./index.js"></script>
+</html>
